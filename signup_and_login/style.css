@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main {
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+    margin: 10px;
+}
+
+.main input {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(245, 245, 245);
+    border: 1px rgb(226, 226, 226) solid;
+    border-radius: 3px;
+}
+
+input[type="submit"]{
+    background-color: rgb(232, 151, 151);
+    width: 180px;
+    font-size: 15px;
+    color: white; /* color of lines written on the bottom */
+    cursor: pointer; /* the hand looking pointer */
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(234, 97, 97); /* change color when hovring on the button */
+    transition: 0.5s; /* time to change color in hover*/
+    
+}
+
+
+#login, #register {
+    background-color: rgb(232, 151, 151);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+}
+#login:hover, #register:hover{
+    background-color: rgb(234, 97, 97);
+    transition: 0.5s;
+}
+
+/* show error message if the user enters wrong username or password*/
+#error{
+    /* background-color: red; */
+    color: red;
+}

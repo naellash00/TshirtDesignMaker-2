@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main {
+text-align: center;
+justify-content: center;
+padding: 10px;
+padding-top: 20px;
+margin: 10px;
+
+}
+
+.main input{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(245, 245, 245);
+    border: 1px rgb(226, 226, 226) solid;
+    border-radius: 3px;
+}
+
+input[type="submit"]{
+background-color: rgb(232, 151, 151);
+width: 180px;
+font-size: 15px;
+color: white; /* color of lines written on the bottom */
+cursor: pointer; /* the hand looking pointer */
+}
+#orderNumber {
+    background-color: rgb(253, 251, 251);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+}
+#orderNumber:hover{
+    background-color: rgb(211, 145, 145);
+    transition: 0.5s;
+}
+input[type="submit"]:hover{
+background-color: rgb(234, 97, 97); /* change color when hovring on the button */
+transition: 0.5s; /* time to change color in hover*/
+
+}
+/* show error message if the user enters empty number or order number not in the DB */
+#error{
+    /* background-color: red; */
+    color: red;
+}
+
+/*From here untill the end stayling for the status bar*/
+.main2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: pop;
+    flex-direction: column;
+}
+
+.head span{
+    color: #ff4732;
+}
+.head2{
+    font-size: 30px;
+    font-weight: 400;
+    color: #333;
+}
+
+ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+ul{
+    display: flex;
+    margin-top: 80px;
+}
+
+img{
+    font-size: 35px;
+    color: #ff4732;
+    margin: 0 60px;
+    max-width: 20%;
+    height: auto;
+
+}
+ul li .text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff4732;
+}
+ul li .status{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(232, 151, 151);
+    margin: 14px 0;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+/*show the line in between status*/
+.status::after{
+    content: " ";
+    position: absolute;
+    width: 320px;
+    height: 8px;
+    background-color: rgb(232, 151, 151);
+    right: 30px;
+}
+/*remove the line after the first status*/
+.one::after{
+    width: 0;
+    height: 0;
+}
+ul li .status .uil{
+    display: none;
+}
+/* activetion stayling  */
+
+ul li .active{
+    background-color: #c13121;
+    display: grid;
+    place-items: center;
+}
+li .active::after{
+    background-color: #ff4732;
+}
+ul li .active p{
+    display: none;
+}
+ul li .active .uil{
+    font-size: 20px;
+    display: flex;
+}
+
+/* responsive Css for different max screen */
+
+@media (max-width: 980px) {
+    ul{
+        flex-direction: column;
+    }
+    ul li{
+        flex-direction: row;
+    }
+    ul li .status{
+        margin: 0 30px;
+
+    }
+    .status::after{
+        width: 5px;
+        height: 55px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .one::after{
+        height: 0;
+    }
+    img{
+        margin: 15px 0;
+        max-width: 10%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
